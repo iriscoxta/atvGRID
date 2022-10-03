@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    gap: 5px;
+    height: 100vh;
+    background-color: black;
+}
+
+.A, .B, .C, .D, .E, .F, .G, .H{color: black; background-color: lightgray; border: 1px solid red;}
+
+.A{grid-area: A;}
+.B{grid-area: B;}
+.C{grid-area: C;}
+.D{grid-area: D;}
+.E{grid-area: E;}
+.F{grid-area: F;}
+.G{grid-area: G;}
+.H{grid-area: H;}
+
+.C{background-color: white;}
+.F, .H{color: white; background-color: blue;}
+
+/* QUESTÃO C */
+.container{
+    grid-template-areas:
+    'H C C A'
+    'B C C A'
+    'B D E F';
+}

@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body, .cabecalho, footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cabecalho, footer{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #727272;
+}
+
+.cabecalho img{
+    width: 100px;
+    height: 70px;
+}
+.menu, footer{
+    display: inline-block;
+    vertical-align: top;
+    height: 20px;
+    padding: 25px;
+
+}
+.menu li{
+    display: inline-block;
+}
+.menu a{
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+footer h5{
+    text-align: center;    
+}
+.containerPostagens{
+    display: grid;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+}
+.containerPostagens{
+    grid-template-areas:'A B C';
+}
+.containerPostagens img{
+    width: 60%;
+    grid-template-areas:'A B C';
+}
+
+.containerItens{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.item{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.item label {
+    padding: 0 20px;
+}
+.item img {
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.item img:hover, .AA:hover {
+    color: orangered;
+    border: 3px solid orangered;
+}
+.esquerdo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+}
+.direito {
+    width: 40%;
+}
+.AA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.AA label {
+    padding: 10px 0;
+}
+.AA img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px){
+    .containerPostagens{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 320px){
+    /* .cabecalho{
+
+    } */
+
+    .containerPostagens{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerItens{
+        display: flex;
+        flex-direction: column;
+    }
+    .esquerdo{
+        display: flex;
+        flex-direction: column;
+    }
+    .direito{
+        display: flex;
+        flex-direction: column;
+    }
+   
+
+}
